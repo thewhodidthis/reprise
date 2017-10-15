@@ -1,29 +1,21 @@
-'use strict';
-
-function cutaway() {
-  const body = document.body;
-  const jack = document.createElement('pre');
-  const papa = console.log;
-
-  const echo = (text) => {
-    if (jack.innerHTML !== '') {
-      jack.innerHTML += '\n';
-    }
-
-    jack.innerHTML += text;
-  };
+((d) => {
+  const body = d.body
+  const mark = d.createElement('pre')
+  const jack = console.log
 
   console.log = (...args) => {
-    const text = args.map(m => (typeof m === 'object' ? JSON.stringify(m) : m.toString()));
+    const text = args.map(m => (typeof m === 'object' ? JSON.stringify(m, null, '\t') : m.toString()))
 
-    const main = text.shift().replace(/%[soOfid]/g, m => text.shift() || m);
-    const rest = text.reduce((p, n) => `${p} ${n}`, '');
+    if (text.length) {
+      const main = text.shift().replace(/%[soOfid]/g, m => text.shift() || m)
+      const rest = text.reduce((p, n) => `${p} ${n}`, '')
 
-    echo(main + rest);
-    papa(...args);
-  };
+      mark.innerHTML += mark.innerHTML !== '' ? '\n' : ''
+      mark.innerHTML += main + rest
+    }
 
-  body.insertBefore(jack, body.firstChild);
-}
+    jack(...args)
+  }
 
-module.exports = cutaway;
+  body.insertBefore(mark, body.firstChild)
+})(document)
