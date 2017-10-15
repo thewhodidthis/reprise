@@ -2,8 +2,11 @@
   "name": "cutaway",
   "version": "0.0.0",
   "description": "Log double in html",
+  "keywords": [
+    "console",
+    "browser"
+  ],
   "main": "index.js",
-  "module": "index.es",
   "homepage": "https://github.com/thewhodidthis/cutaway#readme",
   "repository": {
     "type": "git",
@@ -13,10 +16,8 @@
     "url": "https://github.com/thewhodidthis/cutaway/issues"
   },
   "scripts": {
-    "pretest": "eslint test.js",
-    "test": "rollup -f iife test.js | kpow",
-    "prestart": "eslint index.es",
-    "start": "rollup -f cjs index.es > index.js"
+    "pretest": "eslint .",
+    "test": "rollup -f iife test.js | kpow"
   },
   "eslintConfig": {
     "extends": "@thewhodidthis"
