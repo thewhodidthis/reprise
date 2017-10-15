@@ -1,10 +1,8 @@
-'use strict'
+import './index.js'
 
-import cutaway from './index.es'
+const { log } = console
 
-cutaway()
-
-console.log('Obj -o: %o', { foo: 'bar' })
-console.log('Str -s: %s %s', 'Hello', 'world')
-console.log('Num -i: %d', 1001)
-console.log('Num -f: %f', 10.0)
+log('%s: %o', '%o', { foo: 'bar' })
+log('%s: %s %s', '%s', 'Hello', 'world')
+log('%d: %d', '%i', 1001)
+log('%f: %f', '%f', 10.0)
