@@ -1,5 +1,5 @@
 ## Cutaway
-> Drop in `console.log` mirroring in HTML
+> Drop in HTML mirroring of console logs
 
 ### Setup
 ```sh
