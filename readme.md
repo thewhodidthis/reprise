@@ -1,4 +1,3 @@
-## Cutaway
 > Drop in HTML mirroring of console logs
 
 ### Setup
@@ -9,5 +8,6 @@ npm i thewhodidthis/cutaway
 ```
 ### Usage
 ```js
+// Just an iife
 import 'cutaway'
 ```
