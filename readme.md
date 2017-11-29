@@ -10,4 +10,5 @@ npm i thewhodidthis/cutaway
 ```js
 // Just an iife
 import 'cutaway'
+// ...
 ```
