@@ -4,6 +4,7 @@
   const body = d.body
   const textHost = d.createElement('pre')
 
+  // https://stackoverflow.com/questions/1215392
   console.log = (...args) => {
     const text = args.map((z = '') => (typeof z === 'object' ? stringify(z, null, '\t') : z.toString()))
 
