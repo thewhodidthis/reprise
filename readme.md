@@ -4,7 +4,7 @@ Provides HTML mirroring of browser console logs. Intrusively somewhat `console.l
 
 ## setup
 
-Download to get started:
+Download the [latest stable version](https://npm.im/cutaway) from the _npm_ registry to get started:
 
 ```sh
 # Add to 'package.json' dependencies
@@ -13,7 +13,7 @@ npm install cutaway
 
 ## usage
 
-Include for side effects only:
+Include for side effects only. For example,
 
 ```js
 // Just an iife
