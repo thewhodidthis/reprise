@@ -28,7 +28,7 @@
   "devDependencies": {
     "@thewhodidthis/eslint-config": "^0.1.6",
     "eslint": "^7.2.0",
-    "kpow": "^0.1.7",
+    "kpow": "^0.1.8",
     "rollup": "^2.16.1"
   },
   "engines": {
