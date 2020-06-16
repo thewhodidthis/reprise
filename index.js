@@ -4,18 +4,27 @@
   const body = d.body
   const textHost = d.createElement('pre')
 
+  // Overtake existing `console.log` to insert mirroring
   // https://stackoverflow.com/questions/1215392
   console.log = (...args) => {
-    const text = args.map((z = '') => (typeof z === 'object' ? stringify(z, null, '\t') : z.toString()))
+    // Stringify parameters like `console.log` does internally more or less. Note
+    // `typeof null` is 'object' too. Also, calling `<Number>.toString()` directly
+    // may be a syntax error, but having `<Number>` assigned to `z` is no problem
+    const input = args.map((z = 'undefined') => (typeof z === 'object' ? stringify(z, null, '\t') : z.toString()))
 
-    if (text.length) {
-      const main = text.shift().replace(/%[soOfid]/g, () => text.shift())
-      const rest = text.reduce((p, n) => `${p} ${n}`, '')
+    if (input.length) {
+      // Extract out and fill in substitution strings if any
+      const main = input.shift().replace(/%[soOfid]/g, () => input.shift())
 
-      textHost.innerHTML += textHost.innerHTML !== '' ? '\n' : ''
+      // Collate what's left
+      const rest = input.reduce((p, n) => `${p} ${n}`, '')
+
+      // Observe line breaks past first call
+      textHost.innerHTML += textHost.innerHTML === '' ? '' : '\n'
       textHost.innerHTML += main + rest
     }
 
+    // Do as originally intended
     log(...args)
   }
 
