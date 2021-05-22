@@ -16,7 +16,9 @@
   },
   "license": "ISC",
   "author": "Sotiri Bakagiannis <sotirios.bakagiannis@gmail.com> (http://thewhodidthis.com)",
-  "main": "index.js",
+  "type": "module",
+  "exports": "./cutaway.js",
+  "main": "./cutaway.js",
   "scripts": {
     "pretest": "eslint .",
     "test": "rollup -f iife test.js | kpow"
@@ -24,15 +26,14 @@
   "eslintConfig": {
     "extends": "@thewhodidthis"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@thewhodidthis/eslint-config": "^0.1.6",
-    "eslint": "^7.2.0",
-    "kpow": "^0.1.8",
-    "rollup": "^2.16.1"
+    "@thewhodidthis/eslint-config": "^1.0.1",
+    "eslint": "^7.27.0",
+    "kpow": "^1.0.0",
+    "rollup": "^2.48.0"
   },
   "engines": {
-    "node": ">=6.4.0",
-    "npm": ">=3.10.3"
+    "node": ">=14.7.0",
+    "npm": ">=6.14.13"
   }
 }

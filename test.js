@@ -1,4 +1,4 @@
-import './index.js'
+import './cutaway.js'
 
 const { log } = console
 
