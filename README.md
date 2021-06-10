@@ -17,8 +17,8 @@ Include for side effects only. For example,
 
 ```js
 // Just an iife
-import 'cutaway'
+import "cutaway"
 
 // Say hi in HTML
-console.log('coucou')
+console.log("coucou")
 ```
