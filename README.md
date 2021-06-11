@@ -11,6 +11,16 @@ Download the [latest stable version](https://npm.im/cutaway) from the _npm_ regi
 npm install cutaway
 ```
 
+Alternatively, use an [import map](https://github.com/WICG/import-maps):
+
+```json
+{
+  "imports": {
+    "cutaway": "https://raw.thewhodidthis.com/cutaway.js"
+  }
+}
+```
+
 ## usage
 
 Include for side effects only. For example,
