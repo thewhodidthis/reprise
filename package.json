@@ -20,14 +20,12 @@
   "exports": "./main.js",
   "main": "./main.js",
   "scripts": {
-    "test": "rollup test.js | kpow"
-  },
-  "eslintConfig": {
-    "extends": "@thewhodidthis"
+    "test": "rollup -c node:x test.js | kpow"
   },
   "devDependencies": {
-    "kpow": "^1.0.1",
-    "rollup": "^2.49.0"
+    "kpow": "^2.0.0",
+    "rollup": "^2.51.2",
+    "rollup-config-x": "^4.0.1"
   },
   "engines": {
     "node": ">=14.17.0",
