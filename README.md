@@ -4,19 +4,19 @@ Provides HTML mirroring of browser console logs. Intrusively somewhat `console.l
 
 ## setup
 
-Download the [latest stable version](https://npm.im/cutaway) from the _npm_ registry to get started:
+Download from the _npm_ registry:
 
 ```sh
 # Add to 'package.json' dependencies
 npm install cutaway
 ```
 
-Alternatively, use an [import map](https://github.com/WICG/import-maps):
+Source from an [import map](https://github.com/WICG/import-maps) to use with Deno or in-browser directly:
 
 ```json
 {
   "imports": {
-    "cutaway": "https://raw.thewhodidthis.com/cutaway.js"
+    "cutaway": "https://cdn.jsdelivr.net/npm/cutaway@latest/main.js"
   }
 }
 ```
