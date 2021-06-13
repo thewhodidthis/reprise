@@ -7,7 +7,7 @@ Provides HTML mirroring of browser console logs. Intrusively somewhat `console.l
 Download from the _npm_ registry:
 
 ```sh
-# Add to 'package.json' dependencies
+# Add to package.json
 npm install cutaway
 ```
 
