@@ -23,7 +23,7 @@
     "test": "rollup -c node:x test.js | kpow"
   },
   "devDependencies": {
-    "kpow": "^2.0.1",
+    "kpow": "^2.0.2",
     "rollup": "^2.51.2",
     "rollup-config-x": "^4.0.1"
   },
