@@ -1,4 +1,4 @@
-import "cutaway"
+import "./main.js"
 
 const { log } = console
 

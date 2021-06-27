@@ -20,12 +20,11 @@
   "exports": "./main.js",
   "main": "./main.js",
   "scripts": {
-    "test": "rollup -c node:x test.js | kpow"
+    "test": "esbuild --bundle test.js | kpow"
   },
   "devDependencies": {
-    "kpow": "^2.0.3",
-    "rollup": "^2.51.2",
-    "rollup-config-x": "^4.0.1"
+    "esbuild": "^0.12.10",
+    "kpow": "^3.0.1"
   },
   "engines": {
     "node": ">=14.17.0",
